@@ -4,8 +4,10 @@ metadata:
   namespace: istio-system
   name: example-istiocontrolplane
 spec:
-  # hub: ghcr.io/resf/istio # ARM
+  hub: ghcr.io/resf/istio # ARM
   profile: demo
+  meshConfig:
+    accessLogFile: ''
   components:
     ingressGateways:
       - name: istio-ingressgateway
